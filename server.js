@@ -2,7 +2,7 @@ import express from "express";
 import bodyparser from "body-parser";
 import mongoose from "mongoose";
 import _ from "lodash";
-require("dotenv").config();
+import "dotenv/config"
 
 const port = process.env.PORT || 3000;
 
