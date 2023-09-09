@@ -23,7 +23,7 @@ const app = express();
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect(`mongodb+srv://pc2june:${pass}@cluster0.e2bhz6q.mongodb.net/todolistDB`);
+mongoose.connect(`mongodb+srv://pc2june:`pass`@cluster0.e2bhz6q.mongodb.net/todolistDB`);
 
 const itemsSchema = {
   name: { type: String, required: true },
