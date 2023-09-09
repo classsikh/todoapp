@@ -120,8 +120,8 @@ app.post("/delete", (req, res) => {
     .then(function () {
       console.log(" deleted"); // Success
     })
-    .catch(function (error) {
-      console.log(error); // Failure
+    .catch(function (err) {
+      console.log(err); // Failure
     });
   res.redirect("/today");
   }
@@ -132,8 +132,8 @@ app.post("/delete", (req, res) => {
       console.log(" deleted"); // Success
       res.redirect("/" + listName);
     })
-    .catch(function (error) {
-      console.log(error); // Failure
+    .catch(function (err) {
+      console.log(err); // Failure
     });
   }
 });
