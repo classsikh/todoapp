@@ -6,7 +6,7 @@ import "dotenv/config"
 
 const port = process.env.PORT || 3000;
 
-const pass = process.env.pass;
+const URI = process.env.MONGO_URI;
 
 const date = new Date();
 
@@ -23,7 +23,7 @@ const app = express();
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect(`mongodb+srv://pc2june:`pass`@cluster0.e2bhz6q.mongodb.net/todolistDB`);
+mongoose.connect(URI);
 
 const itemsSchema = {
   name: { type: String, required: true },
